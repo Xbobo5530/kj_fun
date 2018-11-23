@@ -101,6 +101,8 @@ exports.sendNotification = functions.firestore.document('/Messages/{id}').onCrea
     return admin.messaging().sendToTopic(topic, payload)
     .then(function (response) {
         console.log('Notification sent successfully:', response);
+        // const messageRef =  snap.ref;
+        // functions.firestore.document(messageRef)
         return ;
     })
     .catch(function (error) {
